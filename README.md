@@ -16,7 +16,7 @@ RESTFUL ROUTES (there 7 of them)
 name       url              verb       desc.
 ============================================================
 INDEX      /dogs            GET        Display a list of all dogs
-NEW        /dogs/new        GET        Displays form to make a new dogs
+NEW        /dogs/new        GET        Displays form to make a new dogs 
 CREATE     /dogs            POST       Create a new dog to DB, then redirect somewhere
 SHOW       /dogs/:id        GET        Shows info about one specific dog
 EDIT       /dogs/:id/edit   GET        Show edit form for one dog

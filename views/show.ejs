@@ -1,21 +1,31 @@
 <% include partials/header %>
 
 <div class="container ui main text segment">
-    <div class="ui huge header"><%= blog.title %></div>
+<a href="/blogs/<%= blog._id %>/edit">Edit Blog</a>
+    <div class="ui huge header">
+        <%= blog.title %>
+    </div>
     <div class="ui top attached">
         <div class="item">
-            <img class="ui centered rounded image" src=<%= blog.image %> alt="Blog Image">
+            <img class="ui centered rounded image" src=<%=blog.image %> alt="Blog Image">
         </div>
         <div class="content">
-            <span><%= blog.created.toDateString() %></span>
+            <span>
+                <%= blog.created.toDateString() %></span>
         </div>
         <div class="description">
             <!--Escaped output(轉義輸出) with <%= %> (escape function configurable（可配置轉義功能))
             Unescaped raw output(未轉義輸出) with <%- %>-->
             <!--簡單來說就是, 用 - 可以在文章裡使用html tag -->
-            <p><%- blog.body %></p>
+            <p>
+                <%- blog.body %>
+            </p>
         </div>
-    <a href="/">&larr; Go Back!</a>
+        <a href="/blogs/<%= blog._id %>/edit" class="ui orange basic button">Edit</a>
+        <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" id="delete">
+            <button class="ui red basic button">Delete</button>
+        </form>
+        <a href="/">&larr; Go Back!</a>
     </div>
 </div>
 
