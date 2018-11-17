@@ -1,4 +1,9 @@
 # restful_blog_app
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 58a211d6b89e98feb173adda6c1d9aa8c719259a
 # RESTful Routing
 
 ## Introduction
@@ -16,7 +21,11 @@ RESTFUL ROUTES (there 7 of them)
 name       url              verb       desc.
 ============================================================
 INDEX      /dogs            GET        Display a list of all dogs
+<<<<<<< HEAD
 NEW        /dogs/new        GET        Displays form to make a new dogs 
+=======
+NEW        /dogs/new        GET        Displays form to make a new dogs
+>>>>>>> 58a211d6b89e98feb173adda6c1d9aa8c719259a
 CREATE     /dogs            POST       Create a new dog to DB, then redirect somewhere
 SHOW       /dogs/:id        GET        Shows info about one specific dog
 EDIT       /dogs/:id/edit   GET        Show edit form for one dog
@@ -77,4 +86,8 @@ Add Edit and Destroy Links
 
 Sanitize blog body
 Style Index
+<<<<<<< HEAD
 Update REST Table
+=======
+Update REST Table
+>>>>>>> 58a211d6b89e98feb173adda6c1d9aa8c719259a
