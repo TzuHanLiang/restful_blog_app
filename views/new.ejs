@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+<div class="container ui main text segment">
+    <h1 class="ui huge header">Create a New Blog</h1>
+    <form class="ui form" action="/blogs" method="POST">
+      <div class="field">
+        <label>Title: </label>
+        <!--instead of naming the input name like this<input type="text" name="title"> -->
+        <!--It would be better to name the input name like this <input type="text" name="blog[title]"> -->
+        
+        <!--What this will do is, instead of making the value for title available
+        directly from req.body.title it will put it inside of an object, 
+        like so: req.body.blog.title -->
+        
+        <!--Now all of the values from the inputs in the form get added into 
+        one object (req.body.blog) and you can easily input that data into the 
+        database simply by passing in req.body.blog to Blog.create()-->
+        <input type="text" name="blog[title]" placeholder="What's on your mind?">
+      </div>
+      <div class="field">
+        <label>Image: </label>
+        <input type="text" name="blog[image]" placeholder="Choose a photo which inspire you">
+      </div>
+      <div class="field">
+        <label>Blog Content: </label>
+        <textarea name="blog[body]" required></textarea>
+      </div>
+      <button class="ui violet basic button " type="submit">POST</button>
+    </form>
+</div>
+
+
+<% include partials/footer %>

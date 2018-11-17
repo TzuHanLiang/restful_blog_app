@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+
+<div class="container ui main text segment">
+<h1>This is the boilerplate!</h1>
+
+<% blogs.forEach(function(blog){ %>
+<div>
+    <h2><%= blog.title %></h2>
+    <img src=<%= blog.image %> alt="Blog Image">
+    
+    <!--.toDateString() which is a nice way of transforming a date
+    into a better format, but the library called momentjs will be a better option-->
+    <span><%= blog.created.toDateString() %></span>
+    <p><%- blog.body.substring(0, 100) %>...</p>
+    <a href="/blogs/<%= blog._id %>">Read more</a>
+</div>
+<% }) %>
+</div>
+
+<% include ./partials/footer %>
